@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://Mallor-WYB.github.io</id>
     <title>拾染爱恋</title>
-    <updated>2021-08-06T12:05:18.515Z</updated>
+    <updated>2021-08-06T12:39:03.721Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://Mallor-WYB.github.io"/>
+    <link rel="self" href="https://Mallor-WYB.github.io/atom.xml"/>
     <subtitle>一个人无法自成孤岛，要么至少，一个人无法自成最理想的孤岛</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://Mallor-WYB.github.io/images/avatar.png</logo>
+    <icon>https://Mallor-WYB.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 拾染爱恋</rights>
     <entry>
         <title type="html"><![CDATA[Kali2020安装教程]]></title>
-        <id>http://localhost:4000/Kali2020安装/</id>
-        <link href="http://localhost:4000/Kali2020安装/">
+        <id>https://Mallor-WYB.github.io/Kali2020安装/</id>
+        <link href="https://Mallor-WYB.github.io/Kali2020安装/">
         </link>
         <updated>2020-08-16T09:34:28.000Z</updated>
         <content type="html"><![CDATA[<p>最近闲的没事，开始折腾起了kali</p>
@@ -36,8 +36,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[推荐几个IDEA插件]]></title>
-        <id>http://localhost:4000/IDEA插件/</id>
-        <link href="http://localhost:4000/IDEA插件/">
+        <id>https://Mallor-WYB.github.io/IDEA插件/</id>
+        <link href="https://Mallor-WYB.github.io/IDEA插件/">
         </link>
         <updated>2020-08-10T09:58:11.000Z</updated>
         <content type="html"><![CDATA[<h2 id="心得">心得</h2>
@@ -82,8 +82,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(六)]]></title>
-        <id>http://localhost:4000/Spigot开发(六)/</id>
-        <link href="http://localhost:4000/Spigot开发(六)/">
+        <id>https://Mallor-WYB.github.io/Spigot开发(六)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigot开发(六)/">
         </link>
         <updated>2020-08-09T03:03:25.000Z</updated>
         <content type="html"><![CDATA[<p>这次我们来学习制作一个简单的GUI<br>
@@ -167,8 +167,8 @@ GUI.setItem(10,item);
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(五)]]></title>
-        <id>http://localhost:4000/Spigot开发(五)/</id>
-        <link href="http://localhost:4000/Spigot开发(五)/">
+        <id>https://Mallor-WYB.github.io/Spigot开发(五)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigot开发(五)/">
         </link>
         <updated>2020-08-08T05:48:34.000Z</updated>
         <content type="html"><![CDATA[<p>上一期我们讲了config,这一期我们讲解权限组。<br>
@@ -194,8 +194,8 @@ commands:
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(四)]]></title>
-        <id>http://localhost:4000/Spigot开发(四)/</id>
-        <link href="http://localhost:4000/Spigot开发(四)/">
+        <id>https://Mallor-WYB.github.io/Spigot开发(四)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigot开发(四)/">
         </link>
         <updated>2020-08-08T05:16:33.000Z</updated>
         <content type="html"><![CDATA[<p>上一期我们讲了指令，这一期我们讲config.yml(配置文件)</p>
@@ -265,8 +265,8 @@ a:
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(三)]]></title>
-        <id>http://localhost:4000/Spigot开发(三)/</id>
-        <link href="http://localhost:4000/Spigot开发(三)/">
+        <id>https://Mallor-WYB.github.io/Spigot开发(三)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigot开发(三)/">
         </link>
         <updated>2020-08-08T03:27:02.000Z</updated>
         <content type="html"><![CDATA[<p>上一期我们讲解了监听器，这一期我们讲解指令<br>
@@ -349,8 +349,8 @@ sender.sendMessage(&quot;你必须时一个玩家&quot;);  //所要执行的内�
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(二)]]></title>
-        <id>http://localhost:4000/Spigot开发(二)/</id>
-        <link href="http://localhost:4000/Spigot开发(二)/">
+        <id>https://Mallor-WYB.github.io/Spigot开发(二)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigot开发(二)/">
         </link>
         <updated>2020-08-06T10:34:29.000Z</updated>
         <content type="html"><![CDATA[<p>上一期我们讲到了怎么创建一个插件并打包导出运行，这一期我们开始讲解监听器(Listener)的用法</p>
@@ -400,8 +400,8 @@ Event.setJoinMessage(&quot;欢迎&quot;+player+&quot;加入了游戏&quot;);这�
     </entry>
     <entry>
         <title type="html"><![CDATA[从零开始教你编写Spigot插件(一)]]></title>
-        <id>http://localhost:4000/Spigit开发(一)/</id>
-        <link href="http://localhost:4000/Spigit开发(一)/">
+        <id>https://Mallor-WYB.github.io/Spigit开发(一)/</id>
+        <link href="https://Mallor-WYB.github.io/Spigit开发(一)/">
         </link>
         <updated>2020-08-06T03:17:44.000Z</updated>
         <content type="html"><![CDATA[<p>从这篇文章开始我来教大家开发Spigot插件<br>
@@ -509,8 +509,8 @@ version: 1.0
     </entry>
     <entry>
         <title type="html"><![CDATA[关于本博客]]></title>
-        <id>http://localhost:4000/about/</id>
-        <link href="http://localhost:4000/about/">
+        <id>https://Mallor-WYB.github.io/about/</id>
+        <link href="https://Mallor-WYB.github.io/about/">
         </link>
         <updated>2020-07-12T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -546,8 +546,8 @@ Logo: https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/20210424184016.jpg<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[天气发布网站]]></title>
-        <id>http://localhost:4000/earth/</id>
-        <link href="http://localhost:4000/earth/">
+        <id>https://Mallor-WYB.github.io/earth/</id>
+        <link href="https://Mallor-WYB.github.io/earth/">
         </link>
         <updated>2020-07-06T02:17:40.000Z</updated>
         <content type="html"><![CDATA[<p>此网站模拟earth网站，如有侵权请联系作者。</p>

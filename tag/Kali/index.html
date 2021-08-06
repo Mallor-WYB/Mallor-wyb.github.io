@@ -21,7 +21,7 @@
 <meta name="keywords" content="Html,JAVA,PHP,Kali,C++">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1628253486568">
+<meta name="UpdateTime" content="1628253903279">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -225,13 +225,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1628253486568" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1628253903279" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1628253486568" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1628253903279" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -281,208 +281,45 @@
 </header>
         <div id="main">
             <div id="main-part">
-                <div class="lite-item">
-                    <article class="post post-type real-post">
-                        <header class="post-type-header">
-                            
-                                <div class="thumbnail-link" style="background-image: url('https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/Spigot%E5%BC%80%E5%8F%91(%E4%BA%94).png')"></div>
-                                
-                                        <div class="thumbnail-shadow">
-                                            <h1 class="post-title">
-                                                从零开始教你编写Spigot插件(三)
-                                            </h1>
-                                            <div class="post-info">
-                                                <span class="post-category"><i class="Card Card-novel"></i>
-                                        
-                                            <span onclick="javascript:top.location='https://Mallor-WYB.github.io/Java/'">Java</span>
-                                                
-                                            <span onclick="javascript:top.location='https://Mallor-WYB.github.io/spigot/'">Spigot教程</span>
-                                                
-                                                    </span>
-                                                    <span class="post-view">
-                                                    
-                                                        &nbsp;•&nbsp;
-                                                        <span class="post-meta-item-text"><i class="Card Card-view"></i>&nbsp;阅读量&nbsp;</span>
-                                                        <span data-hk-page="current"> - </span>
-                                                        
-                                                            </span>&nbsp;•&nbsp;
-
-                                                            <span class="post-readtime">阅读时间:
-                                            2.3分</span>
-                                                            <span class="post-edit"></span></div>
-                                        </div>
-                                        <div class="post-relative">
-                                            <img alt="拾染爱恋" src="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568" srcset="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568" class="avatar avatar-100 photo" width="100" height="100">
-                                            <span class="post-type-author"><a href="https://Mallor-WYB.github.io" title="由拾染爱恋发布" rel="author">拾染爱恋<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-08-08</span>
-                                        </div>
-                        </header>
-                        <div class="post-main post-type-main">
-                            <div class="post-content">
-                                <div class="post-content-real">
-                                    <p>上一期我们讲解了监听器，这一期我们讲解指令<br>
-这个可能有点不太理解，所以请认真看。</p>
-<h2 id="oncommand">onCommand()</h2>
-<p>打开我们的idea，然后在主类里写一个onCommand方法下面时代码</p>
-<pre><code class="language-Java">@Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        return true;
-    }
-</code></pre>
-<p>这个应该很简单吧，我就不讲解了，不明白的私聊我，或者在下面评论。</p>
-<h2 id="注册">注册</h2>
-<p>我们知道监听器主类都需要注册，命令也同样需要，不过这个有点和他们不一样，这个需要在plugin.yml里面，</p>
-<pre><code class="language-yml">commands:
-   cmd:
-      description: 这是一个命令.
-</code></pre>
-<p>cmd时你想要的命令，你可以替换成你的，description是对命令的介绍，</p>
-<h2 id="开始写命令">开始写命令</h2>
-<p>回到 onCommand().<br>
-首先我们要从sender这获取到他使用的是什么命令.<br>
-Command类下的getName()可以直接获取到这条命令的名称.</p>
-<pre><code class="language-Java"> String cmd = null;
-        cmd = command.getName();
-        if (cmd.equalsIgnoreCase(&quot;cmd&quot;)) {
-            sender.sendMessage(&quot;Hello World&quot;);
-        }
-</code></pre>
-<p>在onCommand方法里写这个命令<br>
-这个意思时如果输入cmd，那么将会发送Hello World。<br>
-这个应该时你的全部代码</p>
-<pre><code class="language-Java"> @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        String cmd = null;
-        cmd = command.getName();
-        if (cmd.equalsIgnoreCase(&quot;cmd&quot;)) {
-            sender.sendMessage(&quot;Hello World&quot;);
-        }
-        return true;
-</code></pre>
-<h2 id="尝试">尝试</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596858185882.png" alt="" loading="lazy"><br>
-输入help+插件名字，就可以看到插件的命令。</p>
-<h2 id="拓展">拓展</h2>
-<p>1.我们把命令写在主类有点不方便，所以我们要新建一个类。<br>
-然后给这个类implements CommandExecutor，<br>
-在下面写入我们的代码</p>
-<pre><code class="language-Java">public class cmd implements CommandExecutor {
-        public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-            String cmd = null;
-            cmd = command.getName();
-            if (cmd.equalsIgnoreCase(&quot;cmd&quot;)) {
-                sender.sendMessage(&quot;Hello World&quot;);
-            }
-            return true;
-        }
-}
-</code></pre>
-<p>这是全部代码<br>
-然后回到主类注册，记得把主类之前的删除，然后<br>
-在onEnable方法中写入</p>
-<pre><code class="language-Java">Bukkit.getPluginCommand(&quot;cmd&quot;).setExecutor(new cmd());
-</code></pre>
-<h2 id="再次尝试">再次尝试</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596858687394.png" alt="" loading="lazy"><br>
-2.我们的指令不一定需要cmd，所以还需要玩家。下面我来教大家怎么判断玩家<br>
-我们可以用if-----else<br>
-只需要加入</p>
-<pre><code class="language-Java">if (sender instanceof Player) {
-sender.sendMessage(&quot;Hello World&quot;); //所要执行的内容
-}else{
-sender.sendMessage(&quot;你必须时一个玩家&quot;);  //所要执行的内容
-}
-</code></pre>
-<h2 id="再次尝试-2">再次尝试</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596859102463.png" alt="" loading="lazy"><br>
-好了这一期就到这里，感谢您认真看完，下期再见！！！</p>
-
-                                </div>
-                            </div>
-                            
-                                <div class="reward ">
-                                    <div class="reward-button ">&yen;
-                                        <span class="reward-code "> 
-                                            <span class="alipay-code "> <img class="alipay-img "  alt = "support " src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1597214477355.png"><b>Alipay</b>                                                            </span>
-                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596766530484.png"><b>Wechat</b> </span> </span>
-                                    </div>
-                                </div>
-                                
-                        </div>
-                        <div class="post-footer">
-                            <div class="post-copyright">
-                                作者:
-                                拾染爱恋<br>永久链接:
-                                    <a href="https://Mallor-WYB.github.io/Spigot开发(三)/" title="从零开始教你编写Spigot插件(三)">
-                                        https://Mallor-WYB.github.io/Spigot开发(三)/
-                                    </a><br> 协议: MIT License
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <style>
-                    .prev:hover {
-                        color: #2d96bd;
-                        text-decoration: none;
-                        text-align: center;
-                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-                    }
-                    
-                    .next:hover {
-                        color: #2d96bd;
-                        text-decoration: none;
-                        text-align: center;
-                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-                    }
-                </style>
-                <div class="lite-item nearby-article">
-                    
-                        <div class="nearby-article-left" style="padding: 10px;">
-                            <a class="prev" rel="prev" href="https://Mallor-WYB.github.io/Spigot开发(四)/">
-                                <i class="fa fa-chevron-left"></i>
-                                从零开始教你编写Spigot插件(四)
-                            </a>
-                        </div>
-                        
-                            
-                                <div class="nearby-article-right" style="padding: 10px;">
-                                    <a class="next" rel="next" href="https://Mallor-WYB.github.io/Spigot开发(二)/">
-                                        从零开始教你编写Spigot插件(二)<i class="fa fa-chevron-right"></i>
-                                    </a>
-                                </div>
-                                
-                </div>
-                <!--Share-->
-                <span style="margin-right:15px">
-    <i class="post-share"></i>
-    <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://Mallor-WYB.github.io/Spigot开发(三)/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://Mallor-WYB.github.io/Spigot开发(三)/&sharesource=qzone&title=从零开始教你编写Spigot插件(三)&pics=https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://Mallor-WYB.github.io/Spigot开发(三)/&sharesource=weibo&title=从零开始教你编写Spigot插件(三) + " - " + &pic="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568"><i class="fa fa-weibo "></i></a>
-                </span>
-                
-                    
-                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
-
-<script>
-    var gitalk = new Gitalk({
-        clientID: '806cdd5d9c5b1de431f9',
-        clientSecret: 'ba0fc3e8e12e19487e5ffa81ce2a24261a54ffe2',
-        repo: 'pinglun',
-        owner: 'Mallor-WYB',
-        admin: ['Mallor-WYB'],
-        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-        distractionFreeMode: false // Facebook-like distraction free mode
-    })
-
-    gitalk.render('gitalk-container')
-</script>
-                            
+                <ul class="posts-list">
+                    <li class="lite-item">
+                        <article class="post post-type">
+                            <div class="post-main post-type-main">
+                                <div class="post-content">
+                                    <div class="post-content-real">
                                         
                                             
+                                                <h3>
+                                                    2020
+                                                </h3>
+                                                
+                                                    
+
+                                                        <article class="archive-item">
+                                                            <a class="archive-item-link" href="https://Mallor-WYB.github.io/post/Kali2020安装/">
+                                                                Kali2020安装教程
+                                                            </a>
+                                                            <span class="archive-item-date">2020-08-16 </span>
+                                                        </article>
+                                                        
+                                                            
+                                                                
+                                    </div>
+                                    <div class="pagination-container">
+                                        
+                                                                
+                                                                        
+                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-footer">
+                                
+                                        
+                            </div>
+                        </article>
+                    </li>
+                </ul>
             </div>
             <div id="sidebar">
     <ul>
@@ -524,21 +361,21 @@ sender.sendMessage(&quot;你必须时一个玩家&quot;);  //所要执行的内�
                                     
                                      {
                                         label: '🏷Kali',
-                                        url: 'https://Mallor-WYB.github.io/Kali/',
+                                        url: 'https://Mallor-WYB.github.io/tag/Kali/',
                                         target: '_button'
                                     },
                                     
                                     
                                      {
                                         label: '🏷Java',
-                                        url: 'https://Mallor-WYB.github.io/Java/',
+                                        url: 'https://Mallor-WYB.github.io/tag/Java/',
                                         target: '_button'
                                     },
                                     
                                     
                                      {
                                         label: '🏷Spigot教程',
-                                        url: 'https://Mallor-WYB.github.io/spigot/',
+                                        url: 'https://Mallor-WYB.github.io/tag/spigot/',
                                         target: '_button'
                                     }
                                     
@@ -632,7 +469,6 @@ sender.sendMessage(&quot;你必须时一个玩家&quot;);  //所要执行的内�
     </ul>
 </div>
         </div>
-
 </body>
 <footer id="foot">
     <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
@@ -708,18 +544,5 @@ sender.sendMessage(&quot;你必须时一个玩家&quot;);  //所要执行的内�
         $('img').attr('data-fancybox', 'images');
     </script>
 </footer>
-    <script>
-        renderMathInElement(document.body, {
-            delimiters: [{
-                left: "$$",
-                right: "$$",
-                display: true
-            }, {
-                left: "$",
-                right: "$",
-                display: false
-            }]
-        });
-    </script>
 
 </html>

@@ -21,7 +21,7 @@
 <meta name="keywords" content="Html,JAVA,PHP,Kali,C++">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1628253486568">
+<meta name="UpdateTime" content="1628253903279">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -225,13 +225,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1628253486568" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1628253903279" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1628253486568" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1628253903279" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -285,18 +285,16 @@
                     <article class="post post-type real-post">
                         <header class="post-type-header">
                             
-                                <div class="thumbnail-link" style="background-image: url('https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/Spigot%E5%BC%80%E5%8F%91(%E4%BA%94).png')"></div>
+                                <div class="thumbnail-link" style="background-image: url('https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/IDEA%E6%8F%92%E4%BB%B6.png')"></div>
                                 
                                         <div class="thumbnail-shadow">
                                             <h1 class="post-title">
-                                                从零开始教你编写Spigot插件(四)
+                                                推荐几个IDEA插件
                                             </h1>
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            <span onclick="javascript:top.location='https://Mallor-WYB.github.io/Java/'">Java</span>
-                                                
-                                            <span onclick="javascript:top.location='https://Mallor-WYB.github.io/spigot/'">Spigot教程</span>
+                                            <span onclick="javascript:top.location='https://Mallor-WYB.github.io/tag/Java/'">Java</span>
                                                 
                                                     </span>
                                                     <span class="post-view">
@@ -308,81 +306,56 @@
                                                             </span>&nbsp;•&nbsp;
 
                                                             <span class="post-readtime">阅读时间:
-                                            2.7分</span>
+                                            1.6分</span>
                                                             <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="拾染爱恋" src="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568" srcset="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="拾染爱恋" src="https://Mallor-WYB.github.io/images/avatar.png?v=1628253903279" srcset="https://Mallor-WYB.github.io/images/avatar.png?v=1628253903279" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://Mallor-WYB.github.io" title="由拾染爱恋发布" rel="author">拾染爱恋<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-08-08</span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-08-10</span>
                                         </div>
                         </header>
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <p>上一期我们讲了指令，这一期我们讲config.yml(配置文件)</p>
-<h2 id="创建文件">创建文件</h2>
-<p>要想使用config.yml就需要创建文件，我们在项目根目录创建一个txt文本文件，把他重命名为config.yml<br>
-然后打开idea，找到这个文件双击，然后在里面输入</p>
-<pre><code class="language-yml">name: SKY
-author: Mallor 
-a: 1
-  b: 2
-    c: 3 
-</code></pre>
-<p>这里面的东西都可以改变，比如name可以改成mingzi,author可以改成zuozhe<br>
-a b c也可以改变。</p>
-<h2 id="导入">导入</h2>
-<p>我们已经创建了，就需要想plugin.yml一样导入，我们打开项目结构，找到构件，然后点击加号，就像plugin.yml一样导入。<br>
-然后回到主类，在onEnable方法里，输入</p>
-<pre><code class="language-Java">savaDefaultConfig();
-</code></pre>
-<h2 id="读与写">读与写</h2>
-<p>在开始之前我给大家几个方法</p>
-<pre><code class="language-Java">saveDefaultConfig(); //如果没有config.yml 则导出一个.
- getConfig().getString(&quot;name&quot;); //在配置文件中读取某一项
- getConfig().set(&quot;&quot;,&quot;&quot;); //将配置文件中某一项的值改写为另一个值
-saveConfig(); //保存配置文件
-reloadConfig(); //重载配置文件
-</code></pre>
-<p>现在你应该已经明白了一些基本用法，下面我来给大家举个例子</p>
-<pre><code class="language-Java">saveDefaultConfig();
-        getLogger().info(getConfig().getString(&quot;name&quot;));
-        getLogger().info(getConfig().getString(&quot;author&quot;));
-        getLogger().info(getConfig().getString(&quot;a.b.c&quot;));
-        getConfig().set(&quot;name&quot;,&quot;Mallor&quot;);
-        saveConfig();
-        reloadConfig();
-</code></pre>
-<p>直接放在onEnable方法里就可以</p>
-<h2 id="测试">测试</h2>
-<p>我们把插件编译成功后，打开服务器会发现自动生成了config.yml文件，然后我们打开里面是我们输入的，我们打开服务器他也会自动读取。<br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596865441735.png" alt="" loading="lazy"><br>
-创建完config之后我们就得使用呗。<br>
-首先新建一个类，随意就好了，然后输入下面代码</p>
-<pre><code class="language-java">    Plugin plugin =org.mallor.sky.A.getPlugin(org.mallor.sky.A.class);//注意Plugin plugin=你的包.你的主类.getPlugin(你的包.你的主类.class);
-     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        Player player =(Player) commandSender;
-        player.sendMessage(plugin.getConfig().getString(&quot;name&quot;));/*这个name是我
-        在config里面输入的，你也可以自定义。主义getString表示的是String，如果想后面跟bloolean ,你可以改成getBoolean，或者其他的 */
-        return false;
-    }
-</code></pre>
-<p>这是我的config</p>
-<pre><code class="language-yml">name: '插件名字:SKY'
-author: '作者：Mallor'
-a:
-  b:
-    c: '欢迎使用本插件'
-
-</code></pre>
-<h1 id="然后还是像指令那样把类写在pluginyml和主类当中千万不要忘记">然后还是像指令那样把类写在plugin.yml和主类当中千万不要忘记</h1>
-<h2 id="测试-2">测试</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1603041110199.png" alt="" loading="lazy"><br>
-因为我的name是SKY。所以我输入play就会显示name的数值。如果你的出现乱码就需要改变一下你的编码，可以使用notead++等软件，具体可以百度<br>
-所以我们就需要改变一下你的文件的编码把文件的编码改成ANSI就可以。</p>
-<p>他也会自动读取，好了这一期就到这里下期再见。</p>
+                                    <h2 id="心得">心得</h2>
+<p>之前敲代码，遇到各种各样的问题，或者敲代码太枯燥，太慢，而我用了插件之后感觉帮助了我很多。<br>
+不推荐添加很多插件这样会导致你的IDEA卡顿(不是电脑卡)；</p>
+<ol>
+<li>插件：
+<ul>
+<li>Material Theme UI</li>
+<li>Atom Material File Icons</li>
+<li>MinecraftDev</li>
+<li>Nyan Progress Bar</li>
+<li>codota</li>
+<li>Chinese ​(Simplified)​ Language Pack EAP</li>
+<li>ideavim</li>
+<li>translation</li>
+<li>activate-power-mode</li>
+</ul>
+</li>
+</ol>
+<h2 id="1material-theme-ui">1.Material Theme UI</h2>
+<p>找了很多主题，个人感觉这个是最好的主题插件，内置了很多好看的主题，新版本的好像没有更改文件和文件夹图标。</p>
+<h2 id="2atom-material-file-icons">2.Atom Material File Icons</h2>
+<p>上文说的没有更改图标，这个插件就可以帮到我们，乍开始用可能不太适应，个人感觉挺好。</p>
+<h2 id="3minecraftdev">3.MinecraftDev</h2>
+<p>这个插件你可以选择添加，我个人着迷于MC，所以这个插件可以帮助我们开发，而且它会自动帮你选择依赖。</p>
+<h2 id="4nyan-progress-bar">4.Nyan Progress Bar</h2>
+<p>这个插件推荐添加，它可以更改IDEA的加载方式为彩虹猫，挺好看的。</p>
+<h2 id="5codota">5.codota</h2>
+<p>这个插件会自动给你提示插件方法等，还会自动给你补全</p>
+<h2 id="6chinese-simplified-language-pack-eap">6.Chinese ​(Simplified)​ Language Pack EAP</h2>
+<p>这个插件就是官方推出的汉化插件，不建议添加，建议刚刚使用IDEA的添加。</p>
+<h2 id="7ideavim">7.ideavim</h2>
+<p>这个插件就是我们常说的Linux的vim编辑器，现在已经一直到IDEA推荐添加。</p>
+<h2 id="8translation">8.translation</h2>
+<p>这个插件也很厉害，支持三大翻译，个人推荐使用谷歌翻译。</p>
+<h2 id="9activate-power-mode">9.activate-power-mode</h2>
+<p>这个插件就是添加了打字特效，如果电脑加载快一点推荐添加。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>像一些美化插件，如果电脑加载慢就不要添加了，不然你敲代码会更烦。</p>
 
                                 </div>
                             </div>
@@ -400,8 +373,8 @@ a:
                             <div class="post-copyright">
                                 作者:
                                 拾染爱恋<br>永久链接:
-                                    <a href="https://Mallor-WYB.github.io/Spigot开发(四)/" title="从零开始教你编写Spigot插件(四)">
-                                        https://Mallor-WYB.github.io/Spigot开发(四)/
+                                    <a href="https://Mallor-WYB.github.io/post/IDEA插件/" title="推荐几个IDEA插件">
+                                        https://Mallor-WYB.github.io/post/IDEA插件/
                                     </a><br> 协议: MIT License
                             </div>
                         </div>
@@ -425,16 +398,16 @@ a:
                 <div class="lite-item nearby-article">
                     
                         <div class="nearby-article-left" style="padding: 10px;">
-                            <a class="prev" rel="prev" href="https://Mallor-WYB.github.io/Spigot开发(五)/">
+                            <a class="prev" rel="prev" href="https://Mallor-WYB.github.io/post/Kali2020安装/">
                                 <i class="fa fa-chevron-left"></i>
-                                从零开始教你编写Spigot插件(五)
+                                Kali2020安装教程
                             </a>
                         </div>
                         
                             
                                 <div class="nearby-article-right" style="padding: 10px;">
-                                    <a class="next" rel="next" href="https://Mallor-WYB.github.io/Spigot开发(三)/">
-                                        从零开始教你编写Spigot插件(三)<i class="fa fa-chevron-right"></i>
+                                    <a class="next" rel="next" href="https://Mallor-WYB.github.io/post/Spigot开发(六)/">
+                                        从零开始教你编写Spigot插件(六)<i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                                 
@@ -443,9 +416,9 @@ a:
                 <span style="margin-right:15px">
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://Mallor-WYB.github.io/Spigot开发(四)/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://Mallor-WYB.github.io/Spigot开发(四)/&sharesource=qzone&title=从零开始教你编写Spigot插件(四)&pics=https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://Mallor-WYB.github.io/Spigot开发(四)/&sharesource=weibo&title=从零开始教你编写Spigot插件(四) + " - " + &pic="https://Mallor-WYB.github.io/images/avatar.png?v=1628253486568"><i class="fa fa-weibo "></i></a>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://Mallor-WYB.github.io/post/IDEA插件/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://Mallor-WYB.github.io/post/IDEA插件/&sharesource=qzone&title=推荐几个IDEA插件&pics=https://Mallor-WYB.github.io/images/avatar.png?v=1628253903279&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://Mallor-WYB.github.io/post/IDEA插件/&sharesource=weibo&title=推荐几个IDEA插件 + " - " + &pic="https://Mallor-WYB.github.io/images/avatar.png?v=1628253903279"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                     
@@ -511,21 +484,21 @@ a:
                                     
                                      {
                                         label: '🏷Kali',
-                                        url: 'https://Mallor-WYB.github.io/Kali/',
+                                        url: 'https://Mallor-WYB.github.io/tag/Kali/',
                                         target: '_button'
                                     },
                                     
                                     
                                      {
                                         label: '🏷Java',
-                                        url: 'https://Mallor-WYB.github.io/Java/',
+                                        url: 'https://Mallor-WYB.github.io/tag/Java/',
                                         target: '_button'
                                     },
                                     
                                     
                                      {
                                         label: '🏷Spigot教程',
-                                        url: 'https://Mallor-WYB.github.io/spigot/',
+                                        url: 'https://Mallor-WYB.github.io/tag/spigot/',
                                         target: '_button'
                                     }
                                     

@@ -1,10 +1,10 @@
-<html>
+<html lang="zh">
 <head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>从零开始教你编写Spigot插件(一) | 拾染爱恋</title>
+<title>关于 - 拾染爱恋</title>
 
 <link rel="shortcut icon" href="https://Mallor-WYB.github.io/favicon.ico?v=1628898586632">
 
@@ -28,7 +28,7 @@
 <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"> </canvas>
 <script type="text/javascript" src="/media/scripts/anime.min.js"></script>
 <script type="text/javascript" src="/media/scripts/fireworks.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -270,143 +270,14 @@
 </script>
 <script type="text/javascript" src="/media/scripts/mouse_text.js"></script>
     <div class="post-container">
-        <div class="post-detail gt-bg-theme-color-second">
+        <div class="post-detail">
             <article class="gt-post-content">
-                <h2 class="post-title">
-                    从零开始教你编写Spigot插件(一)
-                </h2>
-                <div class="post-info">
-                    <time class="post-time gt-c-content-color-first">
-                        · 2020-08-06 ·
-                    </time>
-                    
-                        <a href="https://Mallor-WYB.github.io/tag/Java/" class="post-tags">
-                            # Java
-                        </a>
-                    
-                        <a href="https://Mallor-WYB.github.io/tag/spigot/" class="post-tags">
-                            # Spigot教程
-                        </a>
-                    
-                </div>
                 <div class="post-content">
-                    <p>从这篇文章开始我来教大家开发Spigot插件<br>
-我会把代码放在Github上，地址<a href="https://github.com/Mallor-WYB/Spigot_Plugin">传送门</a><br>
-这个是我在bilibili上的教程视频，可以去看看</p>
-<iframe height=498 width=510 src="//player.bilibili.com/player.html?aid=756437640&bvid=BV1xr4y1K7Sa&cid=290615844&page=1"></iframe>
-<h2 id="首先我们需要准备ide开发工具">首先我们需要准备IDE开发工具</h2>
-<p>我所知道比较好的有两个IDE一个是IntelliJ IDEA和Eclipse,而我呢则是选择IDEA(比较推荐)。</p>
-<h2 id="ide选择了然后下载开服核心和jdk">IDE选择了，然后下载开服核心和JDK</h2>
-<p>大家可以去www.getbukkit.org去下载，记得选择Spigot核心。<br>
-JDK可以去oracle这里下载，记得注册一个账号。</p>
-<h2 id="开始创建项目">开始创建项目</h2>
-<p>我推荐新手去下载一个汉化，IDEA2020.1已经出来了官方的汉化，可以去官网下载。<br>
-然后打开idea, 选择新建项目，然后选择Maven，然后next，下面选择保存位置，然后打开下面的折叠页，第一个是包名，就是xxx.xxx.xxx的这样的格式，也就是把域名倒过来，记得全部小写。我的就是org.mallor.sky<br>
-然后下面的是项目名称不用管他，下面的是版本不用管。</p>
-<h2 id="导入服务器核心">导入服务器核心</h2>
-<p>创建完项目应该是这样的<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596685146631.png" alt="" loading="lazy"><br>
-然后再你的项目根目录新建一个文件夹,叫做lib(标准的依赖存放位置)，接着把你的开服包放进去。<br>
-在里面开服，直接再系统自带的文件管理新建就可以<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596685425342.png" alt="" loading="lazy"><br>
-开服务器应该都会吧，不会的话可以看我的视频，或者加我QQ私聊我639388807<br>
-我们点击文件，点击项目结构，找到模块，<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596685511350.png" alt="" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596685562494.png" alt="" loading="lazy">然后点击右边的加，选择jar或者目录，直接选择lib目录下载开服核心就可以。</p>
-<h2 id="创建一个包">创建一个包</h2>
-<p>创建包应该很简单了，就是上文提到的xxx.xxx.xxx。<br>
-右键main中的java，然后点击新键<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596687251811.png" alt="" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596687302403.png" alt="" loading="lazy"><br>
-这个就是我们所需要的包名，你可以自定义，英文单词，记得小写，然后回车就可以<br>
-。</p>
-<h2 id="新建一个类">新建一个类</h2>
-<p>我们新建包之后开始创建主类，右键我们的包，然后点击新建Java类，输入我们类的名字不要有中文大小写都可以。<br>
-我直接叫他A了。创建完是这样的<br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596688105645.png" alt="" loading="lazy"></p>
-<h2 id="开始">开始！</h2>
-<p>我们再我们的类(A)后面输入extends JavaPlugin，extends前面记得空格。<br>
-然后再{}里面输入</p>
-<pre><code class="language-Java">@Override
-public void onEnable() {
-}
-@Override
-public void onDisable() {
- }
-</code></pre>
-<p>然后呢我们再public void onEnable{<br>
-}里插入    System.out.println(&quot;&quot;);再&quot;&quot;中间就是你想要说的话比如我的就是<br>
-System.out.println(&quot;插件SKY已经成功启动&quot;);<br>
-这个的意思是插件SKY已经成功启动，public void onEnable()这个的意思是启动时所要执行的命令，System.out.println这个只要是学过Java的应该都知道，打印某件事，所以这两个连起来就是当插件启动时，插件会说:”插件SKY已经成功启动“<br>
-一次类推我们在onDisable里面输入插件已经成功关闭也会在控制台输出。<br>
-你可以去试一试。<br>
-这时你的全部正确代码</p>
-<pre><code class="language-Java">public class A extends JavaPlugin {
-    @Override
-    public void onEnable() {
-        System.out.println(&quot;插件SKY已经成功启动&quot;);
-    }
-    @Override
-    public void onDisable() {
-        System.out.println(&quot;插件SKY已经成功关闭&quot;);
-    }
-
-} 
-</code></pre>
-<h2 id="把插件导出">把插件导出</h2>
-<p>既然我们已经制作了插件了，我们就需要把他导出来，我们点击文件项目结构<br>
-然后点击构件，点击+号，然后按照图片操作<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690208762.png" alt="" loading="lazy"><br>
-会弹出这个页面<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690230270.png" alt="" loading="lazy"><br>
-我们在mainclass那里添上你的包名加上你的主类，主类就是刚才新建的类。<br>
-就是像我这样<br>
-org.mallor.sky.A<br>
-然后点击确定，然后找到输出目录，因为我们之前已经开过服务器了，他会自动生成一个叫做Plugins的文件夹，这个就是存放插件的<br>
-我们把这个输出目录放进这里，这样我们构建完插件就可以直接运行服务器。<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690653554.png" alt="" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690658928.png" alt="" loading="lazy"><br>
-插件已经好了，剩下的我们还要给插件做一个身份证。<br>
-如果你用解压软件打开插件你会发现里面有一个plugin.yml的文件我们记事本把他打开，里面一般有3个基本变量，一个是name,main，version<br>
-name就是插件的名字，main，就是他的主类就是我们当时的org.mallor.sky.A<br>
-versoin就是插件的版本，我们直接1.0就可以了。<br>
-我们在我们项目的根目录下新建文件，<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690868284.png" alt="" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596690892074.png" alt="" loading="lazy"><br>
-输入plugin.yml就回车<br>
-然后在里面输入三个变量</p>
-<pre><code class="language-yml">name: 
-main:
-version:
-</code></pre>
-<p>在:后面记得空格<br>
-这个是我的代码</p>
-<pre><code class="language-yml">name: SKY
-main: org.mallor.sky.A
-version: 1.0
-</code></pre>
-<p>身份证已经做好了，剩下的就让他带上，不然和没做一样<br>
-我们点击文件，点击项目结构，然后打开构建。<br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596691145191.png" alt="" loading="lazy"><br>
-然后找到你的plugin.yml文件直接选择回车。<br>
-然后再点击包含着项目结构中，把他选择了<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596691224218.png" alt="" loading="lazy"><br>
-你的是没有点亮的，我们把他给打开。<br>
-点击确定退出。</p>
-<h2 id="开始构建">开始构建</h2>
-<p>插件做好了，我们就开始构建了。我们可以再菜单栏里看到有一个构建的按钮我们直接点击他，然后点击第一个<br>
-<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596691555893.png" alt="" loading="lazy"><br>
-我们就慢慢的等待他，构建完，然后我们再打开服务器，耐心的等待他开服。<br>
-我们会看到他会说插件已经成功运行<img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1596691704617.png" alt="" loading="lazy"><br>
-我们再输入pl指令，会看到有你的插件。<br>
-如果你的插件没有识别可能是你的插件在导入依赖没有搞好，再就是你的代码也有问题，或者plugin.yml文件没有构建。</p>
-
+                    
                 </div>
             </article>
         </div>
-
-        
-            <div class="next-post">
-                <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://Mallor-WYB.github.io/post/about/" class="post-title gt-a-link">
-                    关于本博客
-                </a>
-            </div>
-        
-
-        
-
+        <br>
         
             
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
@@ -453,11 +324,11 @@ version: 1.0
 </script>
 
             
-
             
         
 
         
+
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">一个人无法自成孤岛，要么至少，一个人无法自成最理想的孤岛</div>

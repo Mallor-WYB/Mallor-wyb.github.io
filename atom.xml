@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.srlove.top</id>
     <title>拾染爱恋</title>
-    <updated>2021-08-28T02:28:32.952Z</updated>
+    <updated>2021-08-28T02:30:55.621Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.srlove.top"/>
     <link rel="self" href="https://blog.srlove.top/atom.xml"/>
@@ -41,9 +41,9 @@ https://central.GitHub.com/deployments/desktop/desktop/latest/win32<br>
 <h1 id="第四步-清空gridea-配置目录下ouput文件夹里的所有内容">第四步 清空Gridea 配置目录下ouput文件夹里的所有内容</h1>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/1623482115749.jpg" alt="" loading="lazy"></figure>
 <blockquote>
-<p>需要清空ouput文件夹里的所有内容的原因是GitHub Desktop无法克隆仓库到非空文件夹中，这一步不会影响你的博客数据。</p>
+<p>需要清空ouput文件夹里的所有内容的原因是GitHub Desktop无法克隆仓库到非空文件夹中，这一步不会影响你的博客数据。<br>
+注意output文件夹不要删除</p>
 </blockquote>
-<h2 id="注意output文件夹不要删除">注意output文件夹不要删除</h2>
 <h1 id="第五步-在github-desktop中克隆你的博客仓库">第五步 在GitHub Desktop中克隆你的博客仓库</h1>
 <p><img src="https://cdn.jsdelivr.net/gh/Mallor-WYB/cdn/img/16653482247255.jpg" alt="" loading="lazy"><br>
 注意目录要选择Gridea 配置目录下ouput文件夹<br>
